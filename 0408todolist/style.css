@@ -1,0 +1,88 @@
+*{
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding : 0;
+  font-size: 1vw;
+}
+.topBar{
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-gap: 1vw;
+  margin-bottom: 1%;
+}
+.topBar>div{
+  width: 1fr;
+  height: 20vh;
+  /* border: solid; */
+}
+.topBar>:nth-child(2)>h1{
+  font-size: 5vw;
+  text-align: center;
+}
+.middle{
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-gap: 1vw;
+  padding-bottom: 1%;
+}
+.middle>div{
+  height: 55vh;
+  /* border: solid; */
+}
+
+.bottom{
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-gap: 1vw;
+}
+.bottom>div{
+  height: 15vh;
+  /* border: solid; */
+  text-align: center;
+}
+
+
+.bottom>:nth-child(2){
+  display: flex;
+  justify-content: center;
+}
+
+.bottom>:nth-child(2)>input[type=text]{
+  text-align: center;
+  width: 40vw;
+  height: 5vh;
+  margin: auto;
+}
+
+/* *일정 */
+.listOuterBox>div{
+  margin: auto;
+  width:60vw;
+  height: 5vw;
+  display: flex;
+}
+.listOuterBox>div>div{
+  background-color: rgba(161, 182, 255, 0.44);
+  border-radius:10px ;
+  outline:none;
+  width: 60vw; 
+  height: 5.5vh;
+  text-align: center; 
+}
+.listOuterBox>div>div>p{
+  font-size: 1.5vw;
+}
+
+/* 버튼 */
+.listOuterBox>div>:nth-child(2){
+  outline: none;
+  width: 2vw;
+  height: 4vh;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items:center;  
+  margin: 0.3vw;
+  font-size: 3vh;
+}
+

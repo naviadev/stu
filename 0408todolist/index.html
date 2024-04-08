@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <script src="list.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="topBar">
+          <div><p id="c"></p></div>
+          <div><h1>,</h1></div>
+          <div><button>-</button></div>
+          </div>
+        <div class ="middle">
+          <div></div>
+          <div class = "listOuterBox" id = "parent"></div>
+          <div></div>
+          
+        </div>
+        <div class ="bottom">
+          <div></div>
+          <div><input type="text" id="list" placeholder="일정을 입력해주세요" onchange="arrManager()"></div>
+          <div></div>
+        </div>
+      </div>
+
+
+    
+    
+        
+    </div>
+</body>
+<script src="clock.js"></script>
+</html>
