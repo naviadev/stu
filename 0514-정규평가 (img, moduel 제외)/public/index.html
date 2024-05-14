@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./SCSS/buildStyle.css">
+  <title>Builder</title>
+  
+</head>
+<body>
+
+  <div id = "root" style="background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5))">
+    <!-- ,url(../img/pokemon-fields-ruby-1920x1200-nature-fields-hd-art-wallpaper-preview.jpg) -->
+    <div id = "buildBox">
+      <div id = "top">
+        <div id = "pokemonInfo">
+          <div id = "infoTop">
+            <div id = "imgBox"><img src="https://play.pokemonshowdown.com/sprites/ani-shiny/pichu.gif" alt="" id = "imgTag">
+            </div>
+            <div id = "genderShinyBox">
+              <select id="GenderSelect" form="myForm">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Genderless">Genderless</option>
+            </select>
+            <select name="Shiny" id="isShiny">
+              <option value="none" id = "None">none</option>
+              <option value="Shiny" id = "Shiny">Shiny</option>
+            </select>
+            <input type="text" name = "pokemonName" placeholder="pokemon name">
+            </div>
+            <div id = typeBox>
+              <h5>type : </h5> <p id = "type1"></p> <p id = "type2"></p>
+            </div>
+          </div>
+
+          <div id = "infoBot">
+            <div id ="nameBox">
+              <input type="text" value="" placeholder="name">
+            </div>
+            <div id ="levelBox">
+              <input type="text" value="" placeholder="Level">
+            </div>
+       
+          </div>
+          
+        </div>
+        <div id = "pokemonStats">
+          
+          <div id = "movesBox">
+            <form method="get" id="movesForm">
+              <h3>moves</h3>
+              <input type="text" name="moves1"><br>
+              <input type="text" name="moves2"><br>
+              <input type="text" name="moves3"><br>
+              <input type="text" name="moves4"><br>
+            </form> 
+          </div>
+          <div id = "statsRange">
+            <form method="get" id="statsForm">
+              <h3>stats</h3>
+              <div class = "rangeBar">
+                <p>HP</p><input type="range" id = "Hp" value="0" min="0" max="252"><p id = "hpValue">0</p>
+              </div>
+              <div class = "rangeBar">
+                <p>Attack</p><input type="range" id = "Attack" value="0" min="0" max="252"><p id = "attackValue">0</p>
+              </div>
+              <div class = "rangeBar">
+                <p>Defense</p><input type="range" id = "Defense" value="0" min="0" max="252"><p id = "defenseValue">0</p>
+              </div>
+              <div class = "rangeBar">
+                <p>SpAttack</p><input type="range" id = "SpAttack" value="0" min="0" max="252"><p id = "spAttackValue">0</p>
+              </div>
+              <div class = "rangeBar">
+                <p>SpDefense</p><input type="range" id = "SpDefense" value="0" min="0" max="252"><p id = "spDefenseValue">0</p>
+              </div>
+              <div class = "rangeBar">
+                <p>Speed</p><input type="range" id = "Speed" value="0" min="0" max="252"><p id = "speedValue">0</p>
+              </div>
+            </form> 
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- 시뮬레이터 영역 -->
+
+      <!-- grid "a b c" -->
+      <div id = "bottom" class = "updateView">
+          <!-- a Area -->
+        <div class = "trainer user1"></div>
+
+        <!-- b Area -->
+        <div id = "battleView">
+
+          <!-- Player Area -->
+          <div id="B_User1">
+
+            <div class = "pokeScene">
+              <!-- user1 - name + gender Label -->
+              
+              <div id = "statLabel-Battle" >
+                <div id = "Battle-name">Pikachu</div>
+                <div class = "gender">
+                  <img src="https://play.pokemonshowdown.com/fx/gender-m.png" alt="F" width="7" height="11" id="GenderImage-User1">
+                </div>
+              </div>
+              
+              <div class = hpbar id = "u1HpBar">
+                  <div class = hpText id = "u1HpText"></div>
+                  <div class = hpTextHolder id = "u1hpTextHolder"></div>
+                  <div class="prevhp" id = "u1PrevHp">
+                    <div class="hp" id = "u1Hp"></div>
+                  </div>
+              </div>
+              
+              <img src="https://play.pokemonshowdown.com/sprites/ani-back/pichu.gif" id = "battleImg-player">
+
+            </div>
+
+
+            <div class = "PlayerButton">
+              <button>moves1</button>
+              <button>moves2</button>
+              <button>moves3</button>
+              <button>moves4</button>
+            </div>
+          </div>
+
+
+
+
+          <div id="B_User2">
+
+
+            <div class = "trash"></div>
+            
+            
+            <div class = "pokeScene">
+              <div id = "statLabel-Battle_enemy">
+
+              </div>
+              <div class = "stat label2">
+          
+                <div class = "gender">
+                  <img src="https://play.pokemonshowdown.com/fx/gender-f.png" alt="" width="7" height="10" id="GenderImage-User2">
+                </div>
+      
+                <div class = hpbar id = "u2HpBar">
+                  <div class = hpText id = "u2HpText"></div>
+                  <div class = hpTextHolder id = "u2hpTextHolder"></div>
+                  <div class="prevhp" id = "u2PrevHp">
+                    <div class="hp" id = "u2Hp"></div>
+                  </div>
+                </div>
+                
+                <div id = "name">raichu</div>
+      
+              </div>
+               
+  
+
+              <img src="https://play.pokemonshowdown.com/sprites/ani/aron.gif" id = "battleImg-none">
+            </div>
+            
+          </div>
+        </div>
+
+
+        <div class = "trainer user2"></div>
+      </div>
+    </div>  
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>

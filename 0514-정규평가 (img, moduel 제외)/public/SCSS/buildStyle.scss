@@ -1,0 +1,227 @@
+*{
+  margin: 0px;
+  padding : 0px;
+
+}
+
+
+#root{
+  width: 100vw;
+  height: 150vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // buildBox
+  >:nth-child(1){
+    width: 80vw;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    grid-template-areas: "a" 
+    "b";
+
+    // top
+    >:nth-child(1){
+      grid-area: a ;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: "info stats" ;
+      
+      // pokemonInfo
+      >:nth-child(1){
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        // infotop
+        >:nth-child(1){
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          // imgBox
+          >:nth-child(1){
+            display: flex;
+          }
+          // shinyBox
+          >:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            // genderSelecter
+            >:nth-child(1){margin: auto; width: 100%;}
+            // shinySelecter
+            >:nth-child(2){margin: auto; width: 100%;}
+          }
+        }
+        // bot
+        >:nth-child(2){
+          >:nth-child(1){margin: 10px;}
+          >:nth-child(2){margin: 10px;}
+          
+        }
+
+      }
+      
+      // pokemonStats
+      >:nth-child(2){
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        
+        // movesBox
+        >:nth-child(1){
+          // form
+          >:nth-child(1){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center ;
+            align-items: center;
+            >input{
+              width: 80%;
+              margin: 10px;
+            }
+          }
+        }
+
+        // statsRange
+        >:nth-child(2){
+          // form
+          >:nth-child(1){
+            display: flex;
+            flex-direction: column;
+            >.rangeBar{
+              display: flex;
+              margin: 10px;
+              >p{
+                display: block;
+                width: 50%;
+              }
+            }
+            >input{
+              margin: 10px;
+            }
+          }
+        }
+      }
+
+    }
+
+    // bottom
+    >:nth-child(2){
+      grid-area: b ;
+
+    }
+  }
+}
+
+
+
+#bottom{
+  margin-top: 30px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  border-style:double;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: "a b c";
+  // trainer 1 
+  >:nth-child(1){
+    grid-area: a;
+  }
+
+  // battleView
+  >:nth-child(2){
+    grid-area: b;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "top" "bot";
+    //bu1
+    >:nth-child(1){
+      grid-area: bot;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      // pokeScene
+      >:nth-child(1){
+        
+        // statsLabel - 98
+        >:nth-child(1){
+          display: flex;
+          align-items: center;
+        }
+      }
+      // playerbutton
+      >:nth-child(2){
+
+      }
+    }
+    //bu2
+    >:nth-child(2){
+      grid-area: top;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      // pokeScene2
+      >:nth-child(2){
+        
+      }
+    }
+  }
+  
+
+  // trainer 2 
+  >:nth-child(3){
+    grid-area: c;
+  }
+
+}
+
+
+
+.stat{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.gender{
+  margin: 5px;
+}
+.prevhp{
+  width: 151px;
+}
+
+.hpbar{
+  position: relative;
+  border: 1px solid #777;
+  background: #fcfeff;
+  padding: 1px;
+  height: 8px;
+  margin: 0;
+  width: 151px;
+  border-radius: 4px;
+}
+
+.hp{
+  width: 150px;
+  border-right-width: 1px;
+  height: 4px;
+  border-top: 2px solid #00dd60;
+  background: #00bb51;
+  border-bottom: 2px solid #007734;
+  border-right: 1px solid #007734;
+  border-radius: 3px;
+}
+.hptext {
+  left: -32px;
+  border-radius: 4px 0 0 4px;
+}
+
+.hp-yellow{
+  border-top-color: #f8e379;
+  background-color: #f5d538;
+  border-bottom-color: #be9f0a;
+  border-right-color: #be9f0a;
+}
+.hp-red{
+  border-top-color: #f37f67;
+  background-color: #ee4928;
+  border-bottom-color: #a3260d;
+  border-right-color: #a3260d;
+}
